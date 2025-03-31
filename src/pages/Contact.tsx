@@ -42,7 +42,12 @@ const Contact = () => {
               className="bg-gray-900/50 p-8 rounded-lg"
             >
               <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-              <form className="space-y-6">
+              <form
+                action="mailto:kawarobson3@gmail.com"
+                method="post"
+                encType="text/plain"
+                className="space-y-6"
+              >
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name
@@ -50,8 +55,10 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-green transition-colors"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div>
@@ -61,8 +68,10 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-green transition-colors"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
                 <div>
@@ -71,9 +80,11 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={6}
                     className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-green transition-colors"
                     placeholder="Your message"
+                    required
                   ></textarea>
                 </div>
                 <button type="submit" className="btn-primary w-full">
@@ -96,7 +107,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-neon-green" />
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <p className="text-gray-400">quantambizsolutions@gmail.com</p>
+                      <p className="text-gray-400">kawarobson3@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
