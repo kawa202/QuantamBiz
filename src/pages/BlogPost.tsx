@@ -12,7 +12,7 @@ const BlogPost = () => {
       slug: 'future-of-digital-transformation',
       title: 'The Future of Digital Transformation',
       excerpt: 'Exploring the latest trends and technologies shaping business transformation.',
-      author: 'John Smith',
+      author: 'Robson Kawa',
       date: 'March 15, 2024',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       category: 'Technology',
@@ -27,9 +27,9 @@ const BlogPost = () => {
       slug: 'building-high-performance-teams',
       title: 'Building High-Performance Teams',
       excerpt: 'Key strategies for developing and maintaining successful teams in modern organizations.',
-      author: 'Sarah Johnson',
+      author: 'Anesu Chada',
       date: 'March 12, 2024',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://img.freepik.com/premium-photo/business-whiteboard-presentation-black-man-as-leader-training-feedback-planning-ideas-discussion-seminar-brainstorming-marketing-meeting-office-creative-workshop-teamwork_590464-182220.jpg?ga=GA1.1.2037332277.1743240100&semt=ais_hybrid',
       category: 'Leadership',
       content: `High-performance teams are the backbone of successful organizations. Creating and 
       maintaining such teams requires a careful balance of leadership, culture, and individual 
@@ -42,9 +42,9 @@ const BlogPost = () => {
       slug: 'innovation-in-business-strategy',
       title: 'Innovation in Business Strategy',
       excerpt: 'How innovative approaches are reshaping traditional business strategies.',
-      author: 'Michael Brown',
+      author: 'Michael Madziva',
       date: 'March 10, 2024',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fEJ1c2luZXNzJTIwc3VjY2VzcyUyMGlsbHVzdHJhdGlvbnN8ZW58MHx8MHx8fDA%3D',
       category: 'Strategy',
       content: `Innovation is no longer just a buzzword - it's a necessity for business survival 
       and growth in today's rapidly evolving market landscape. Companies must embrace new 
