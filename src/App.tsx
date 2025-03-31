@@ -15,12 +15,12 @@ import TrainingCapacity from './pages/services/TrainingCapacity';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/QuantamBiz">
       <div className="min-h-screen bg-black">
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes>
-            <Route path="/QuantamBiz" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
