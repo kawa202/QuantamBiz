@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight, CheckCircle, Users, BarChart, Brain } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -14,20 +14,22 @@ const Home = () => {
   const services = [
     {
       icon: <BarChart className="h-8 w-8 text-neon-green" />,
-      title: 'Business Strategy & Operations',
+      title: 'Business Strategy',
       description: 'Develop winning strategies that drive growth and innovation.',
+      link: '/services/business-strategy'
     },
     {
       icon: <Brain className="h-8 w-8 text-neon-green" />,
-      title: 'Technology & IT Solutions',
+      title: 'Technology Solutions',
       description: 'Cutting-edge tech solutions for modern business challenges.',
+      link: '/services/technology-solutions'
     },
     {
       icon: <Users className="h-8 w-8 text-neon-green" />,
-      title: 'Marketing & Branding',
+      title: 'Team Development',
       description: 'Build high-performing teams that deliver exceptional results.',
+      link: '/services/training-capacity'
     },
-
   ];
 
   return (
@@ -74,6 +76,7 @@ const Home = () => {
         </div>
       </section>
 
+      
       {/* Services Section */}
       <section ref={ref} className="section-padding">
         <div className="max-w-7xl mx-auto">
@@ -94,16 +97,35 @@ const Home = () => {
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-gray-900/50 p-8 rounded-lg hover:bg-gray-900/80 transition-all duration-300"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {service.icon}
-                <h3 className="text-xl font-bold mt-4 mb-2">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
+                <Link
+                  to={service.link}
+                  className="block bg-gray-900/50 p-8 rounded-lg hover:bg-gray-900/80 transition-all duration-300"
+                >
+                  {service.icon}
+                  <h3 className="text-xl font-bold mt-4 mb-2">{service.title}</h3>
+                  <p className="text-gray-400">{service.description}</p>
+                </Link>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-center mt-12"
+          >
+            <button
+              onClick={() => navigate('/services')}
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              View All Services
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </motion.div>
         </div>
       </section>
 
