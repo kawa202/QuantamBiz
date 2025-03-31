@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight, CheckCircle, Users, BarChart, Brain } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -63,7 +65,9 @@ const Home = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button className="btn-primary">Get Started</button>
-            <button className="text-white flex items-center gap-2 hover:text-neon-green transition-colors">
+            <button className="text-white flex items-center gap-2 hover:text-neon-green transition-colors"
+              onClick={() => navigate('/about')}
+              >
               Learn More <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>

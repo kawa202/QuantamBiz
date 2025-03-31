@@ -12,6 +12,7 @@ import TechnologySolutions from './pages/services/TechnologySolutions';
 import BusinessStrategy from './pages/services/BusinessStrategy';
 import MarketingBranding from './pages/services/MarketingBranding';
 import TrainingCapacity from './pages/services/TrainingCapacity';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services/marketing-branding" element={<MarketingBranding />} />
             <Route path="/services/training-capacity" element={<TrainingCapacity />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
