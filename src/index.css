@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neon-green: #39FF14;
+  }
+  
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-transparent border-2 border-[var(--neon-green)] text-white rounded-full 
+    transition-all duration-300 hover:bg-[var(--neon-green)] hover:text-black hover:shadow-[0_0_20px_rgba(57,255,20,0.5)];
+  }
+
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-10 transition-all duration-700;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms, transform 400ms;
+}
