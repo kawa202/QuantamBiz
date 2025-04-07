@@ -66,7 +66,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="btn-primary">Get Started</button>
+            <button className="btn-primary" onClick={() => navigate('/contact')}>Get Started</button>
             <button className="text-white flex items-center gap-2 hover:text-neon-green transition-colors"
               onClick={() => navigate('/about')}
               >

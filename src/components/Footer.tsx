@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Lightbulb, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
 
@@ -18,8 +19,13 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Lightbulb className="h-8 w-8 text-neon-green" />
-              <span className="text-xl font-bold">QuantamBiz</span>
+              
+              <img 
+              src={logo} 
+              alt="QuantamBiz Logo" 
+              className="h-12 w-auto" // Adjust height as needed
+            />
+              <span className="text-xl font-bold">QuantamBs</span>
             </Link>
             <p className="text-gray-400 mb-4">
               Transforming businesses through innovative solutions and strategic consulting.

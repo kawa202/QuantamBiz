@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +36,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <Lightbulb className="h-8 w-8 text-neon-green" />
-            <span className="text-xl font-bold">QuantamBiz</span>
+            
+            <img 
+              src={logo} 
+              alt="QuantamBiz Logo" 
+              className="h-12 w-auto" // Adjust height as needed
+            />
+            <span className="text-xl font-bold">QuantamBS</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +58,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="btn-primary">Get Started</button>
+            <button className="btn-primary" onClick={() => navigate('/contact')}>Get Started</button>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -88,7 +95,7 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="btn-primary w-full mt-4">Get Started</button>
+              <button className="btn-primary w-full mt-4" onClick={() => navigate('/contact')}>Get Started</button>
             </div>
           </motion.div>
         )}
